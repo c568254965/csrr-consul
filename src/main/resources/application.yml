@@ -1,0 +1,18 @@
+server:
+  port: 32222
+  servlet:
+    context-path: /csrr-consul
+
+
+# springboot整合postgres连接配制
+spring:
+  application:
+    name: csrr-consul-app-consumer
+  cloud:
+    consul:
+      host: 127.0.0.1
+      port: 8500
+      discovery:
+        service-name: csrr-consul-consumer
+        register: false
+
